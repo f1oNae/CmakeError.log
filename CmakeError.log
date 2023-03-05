@@ -1,0 +1,522 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d3496.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  src.c
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d3496.dir\Debug\\" /Fd"cmTC_d3496.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_d3496.vcxproj]
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_594e9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  CheckFunctionExists.c
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_594e9.dir\Debug\\" /Fd"cmTC_594e9.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_594e9.vcxproj]
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_7573f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  CheckFunctionExists.c
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7573f.dir\Debug\\" /Fd"cmTC_7573f.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.24\Modules\CheckFunctionExists.c"
+LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_7573f.vcxproj]
+
+
+
+Determining if the CXX compiler accepts the flag -features=no%anachronisms passed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_32d59.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  src.cxx
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_32d59.dir\Debug\\" /Fd"cmTC_32d59.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  -features=no%%anachronisms "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  warning D9002: 忽略未知选项“-features=no%%anachronisms” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_32d59.vcxproj]
+  cmTC_32d59.vcxproj -> C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\Debug\cmTC_32d59.exe
+
+
+Source file was:
+int main() { return 0;}
+
+Performing C SOURCE FILE Test C_HAS_WARNING-Wno-uninitialized failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e7d3c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wno-uninitialized" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e7d3c.dir\Debug\\" /Fd"cmTC_e7d3c.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wno-uninitialized "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-uninitialized” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_e7d3c.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wno-unused-parameter failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e05a4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wno-unused-parameter" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e05a4.dir\Debug\\" /Fd"cmTC_e05a4.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wno-unused-parameter "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-unused-parameter” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_e05a4.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wno-long-double failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2a6ae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wno-long-double" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a6ae.dir\Debug\\" /Fd"cmTC_2a6ae.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wno-long-double "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-long-double” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_2a6ae.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wcast-align failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b0279.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wcast-align" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b0279.dir\Debug\\" /Fd"cmTC_b0279.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wcast-align "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wcast-align” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_b0279.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wdisabled-optimization failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_057d6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wdisabled-optimization" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_057d6.dir\Debug\\" /Fd"cmTC_057d6.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wdisabled-optimization "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wdisabled-optimization” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_057d6.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wextra failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_48399.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wextra" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_48399.dir\Debug\\" /Fd"cmTC_48399.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wextra "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wextra” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_48399.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wformat_2 failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d7569.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wformat_2" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d7569.dir\Debug\\" /Fd"cmTC_d7569.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wformat=2 "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wformat=2” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_d7569.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Winvalid-pch failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_db408.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Winvalid-pch" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db408.dir\Debug\\" /Fd"cmTC_db408.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Winvalid-pch "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Winvalid-pch” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_db408.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wno-format-nonliteral failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_95d6f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wno-format-nonliteral" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_95d6f.dir\Debug\\" /Fd"cmTC_95d6f.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wno-format-nonliteral "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-format-nonliteral” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_95d6f.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wpointer-arith failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f050a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wpointer-arith" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f050a.dir\Debug\\" /Fd"cmTC_f050a.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wpointer-arith "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wpointer-arith” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_f050a.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wshadow failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_177ba.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wshadow" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_177ba.dir\Debug\\" /Fd"cmTC_177ba.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wshadow "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wshadow” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_177ba.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wunused failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_68e19.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wunused" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_68e19.dir\Debug\\" /Fd"cmTC_68e19.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wunused "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wunused” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_68e19.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wwrite-strings failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_acbd6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wwrite-strings" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_acbd6.dir\Debug\\" /Fd"cmTC_acbd6.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wwrite-strings "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wwrite-strings” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_acbd6.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-funit-at-a-time failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_85e6d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  src.c
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-funit-at-a-time" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_85e6d.dir\Debug\\" /Fd"cmTC_85e6d.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -funit-at-a-time "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  warning D9002: 忽略未知选项“-funit-at-a-time” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_85e6d.vcxproj]
+  cmTC_85e6d.vcxproj -> C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\Debug\cmTC_85e6d.exe
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_HAS_WARNING-Wno-strict-overflow failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_21d85.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "C_HAS_WARNING-Wno-strict-overflow" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_21d85.dir\Debug\\" /Fd"cmTC_21d85.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue  /bigobj -Wno-strict-overflow "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.c"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-strict-overflow” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_21d85.vcxproj]
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wno-long-double failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_0bd94.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wno-long-double" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_0bd94.dir\Debug\\" /Fd"cmTC_0bd94.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wno-long-double "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-long-double” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_0bd94.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wcast-align failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d150d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wcast-align" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_d150d.dir\Debug\\" /Fd"cmTC_d150d.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wcast-align "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wcast-align” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_d150d.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wdisabled-optimization failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a3e96.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wdisabled-optimization" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_a3e96.dir\Debug\\" /Fd"cmTC_a3e96.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wdisabled-optimization "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wdisabled-optimization” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_a3e96.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wextra failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ae7ec.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wextra" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_ae7ec.dir\Debug\\" /Fd"cmTC_ae7ec.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wextra "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wextra” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_ae7ec.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wformat_2 failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1f2fd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wformat_2" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_1f2fd.dir\Debug\\" /Fd"cmTC_1f2fd.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wformat=2 "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wformat=2” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_1f2fd.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Winvalid-pch failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_97566.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Winvalid-pch" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_97566.dir\Debug\\" /Fd"cmTC_97566.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Winvalid-pch "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Winvalid-pch” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_97566.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wno-format-nonliteral failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f0845.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wno-format-nonliteral" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f0845.dir\Debug\\" /Fd"cmTC_f0845.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wno-format-nonliteral "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-format-nonliteral” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_f0845.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wpointer-arith failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d3cbb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wpointer-arith" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_d3cbb.dir\Debug\\" /Fd"cmTC_d3cbb.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wpointer-arith "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wpointer-arith” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_d3cbb.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wshadow failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_6d6cf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wshadow" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_6d6cf.dir\Debug\\" /Fd"cmTC_6d6cf.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wshadow "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wshadow” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_6d6cf.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wunused failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_529fe.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wunused" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_529fe.dir\Debug\\" /Fd"cmTC_529fe.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wunused "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wunused” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_529fe.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wwrite-strings failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a15c5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wwrite-strings" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_a15c5.dir\Debug\\" /Fd"cmTC_a15c5.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wwrite-strings "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wwrite-strings” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_a15c5.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-funit-at-a-time failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_5a88d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  src.cxx
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-funit-at-a-time" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_5a88d.dir\Debug\\" /Fd"cmTC_5a88d.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -funit-at-a-time "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  warning D9002: 忽略未知选项“-funit-at-a-time” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_5a88d.vcxproj]
+  cmTC_5a88d.vcxproj -> C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\Debug\cmTC_5a88d.exe
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wno-strict-overflow failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f9e15.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wno-strict-overflow" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f9e15.dir\Debug\\" /Fd"cmTC_f9e15.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wno-strict-overflow "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-strict-overflow” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_f9e15.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wno-deprecated failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_43fe7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wno-deprecated" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_43fe7.dir\Debug\\" /Fd"cmTC_43fe7.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wno-deprecated "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-deprecated” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_43fe7.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wno-invalid-offsetof failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fd28e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wno-invalid-offsetof" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_fd28e.dir\Debug\\" /Fd"cmTC_fd28e.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wno-invalid-offsetof "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-invalid-offsetof” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_fd28e.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wno-undefined-var-template failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_4b92b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wno-undefined-var-template" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_4b92b.dir\Debug\\" /Fd"cmTC_4b92b.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wno-undefined-var-template "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wno-undefined-var-template” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_4b92b.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Woverloaded-virtual failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f28b3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Woverloaded-virtual" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f28b3.dir\Debug\\" /Fd"cmTC_f28b3.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Woverloaded-virtual "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Woverloaded-virtual” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_f28b3.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_WARNING-Wstrict-null-sentinel failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_7947f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CXX_HAS_WARNING-Wstrict-null-sentinel" /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_7947f.dir\Debug\\" /Fd"cmTC_7947f.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj -Wstrict-null-sentinel "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+cl : 命令行  error D8021: 无效的数值参数“/Wstrict-null-sentinel” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_7947f.vcxproj]
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_HAS_DISABLE_OPTIMIZATION_FLAG failed with the following output:
+Change Dir: C:/D/S4D/Slicer-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_244f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.5.0+6f08c67f3 for .NET Framework
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.35.32215 版
+  src.cxx
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_HAS_DISABLE_OPTIMIZATION_FLAG /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_244f9.dir\Debug\\" /Fd"cmTC_244f9.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue  /bigobj /bigobj "C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx"
+C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\src.cxx(1,1): error C2059: 语法错误:“/” [C:\D\S4D\Slicer-build\CMakeFiles\CMakeTmp\cmTC_244f9.vcxproj]
+
+
+Source file was:
+/Od
